@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ua" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Index</title>
+</head>
+<body>
+<h2>Add:</h2>
+<br>
+<form action="/" method="post">
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="Surname" name="surname">
+    <input type="email" placeholder="Email" name="email">
+    <input type="submit">
+</form>
+
+<a        th:each="user : ${allList}"
+        th:href="@{'user-'+${user.id}}">
+
+    [[${user}]]
+    <br>
+</a>
+<script src="js.js"></script>
+</body>
+</html>

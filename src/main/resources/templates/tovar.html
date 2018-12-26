@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Tovar</title>
+</head>
+<body>
+
+<div>
+    <form action="/tovar" method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="about" placeholder="about">
+        <input type="number" name="prise" placeholder="prise">
+        <input type="submit" value="Add">
+    </form>
+</div>
+
+<div class="main">
+    <form action="/tovar" method="get"><input type="submit" value="Всі товари"></form>
+    <form action="/tovar_1000" method="get"><input type="submit" value="Товари дорощі 1000"></form>
+    <form action="/tovar_2000" method="get"><input type="submit" value="Товари дорощі 2000"></form>
+    <form action="/tovar_ten" method="get"><input type="submit" value="Остані 10 товарів"></form>
+    <form action="tovar_by_name" method="get"><input type="submit" value="Товари по алфавіту"></form>
+</div>
+
+
+<div class="fild" th:each="t : ${all}">
+    <!--<div class="tovar" th:text="${t.getId()+' '+t.getName()+' '+t.getPrise()+' '+t.getAbout()}"></div>-->
+    <div class="tovar">
+        <div class="line" th:text="${'Назва: '+t.getName()}"></div>
+        <div class="line" th:text="${'Опис: '+t.getAbout()}"></div>
+        <div class="line" th:text="${'Ціна: '+t.prise+' грн.'}"></div>
+
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

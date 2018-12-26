@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="style.css">
+<head>
+    <title>Thymeleaf</title>
+
+</head>
+<body>
+<select name="sel" id="sel">
+    <option th:each="user : ${w}">[[${user.name}]] [[${user.surname}]]</option>
+</select>
+<script src="js.js"></script>
+</body>
+</html>

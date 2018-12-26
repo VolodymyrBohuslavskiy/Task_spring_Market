@@ -1,0 +1,42 @@
+body {
+    background: dimgrey;
+    width: 80%;
+    margin: 10px 10%;
+}
+
+h2, h3 {
+    color: cornsilk;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    background: darkcyan;
+}
+
+
+form {
+    display: inline-block;
+}
+
+.fild {
+    width: 15%;
+    height: 120px;
+    background: #cecece;
+    text-decoration: midnightblue;
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+    border: darksalmon;
+    border-radius: 5px;
+}
+
+form {
+    display: inline-block;
+    margin: 5px;
+}
+
+.line{
+    text-align: center;
+
+}
